@@ -1,0 +1,16 @@
+
+# Ignore compiled/binary/executable files (anywhere in the repo)
+*.exe
+*.out
+*.o
+
+# Ignore common build/output directories (a folder named `output` anywhere)
+output/
+
+# Ignore simple I/O test files commonly used in exercises
+input.txt
+output.txt
+
+# Local editor/IDE folders you may want to ignore (optional)
+.vscode/
+
