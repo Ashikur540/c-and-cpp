@@ -11,7 +11,7 @@ int main()
     // ss >> word;
     // cout << word << endl;
     // ss >> word;
-    // cout << word << endl;
+    // cout << word << end   l;
 
     //  or loop
 
