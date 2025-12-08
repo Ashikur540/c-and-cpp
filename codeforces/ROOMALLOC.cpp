@@ -13,14 +13,14 @@ int main()
         cin >> clgs;
 
         int teams[clgs];
-        int total_members = 0;
+        int total_rooms = 0;
         for (int i = 0; i < clgs; i++)
         {
             cin >> teams[i];
-            total_members += teams[i];
+            total_rooms += ceil(double(teams[i]) / 2);
         }
 
-        cout << ceil(double(total_members) / 2) << endl;
+        cout << total_rooms << endl;
     }
 
     return 0;
