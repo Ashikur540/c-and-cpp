@@ -36,16 +36,19 @@ void insert_at_head(Node *&head, int val)
 }
 
 // insert at tail or last
-void push(Node *head, Node *&tail, int val)
+void push(Node *&head, Node *&tail, int val)
 {
     Node *newNode = new Node(val);
-    if (head == NULL)
+    if (head == NULL) // List is empty
     {
         head = newNode;
         tail = newNode;
     }
-    tail->next = newNode;
-    tail = newNode;
+    else // List is not empty
+    {
+        tail->next = newNode;
+        tail = newNode;
+    }
 }
 // insert an any pos
 void insert(Node *head, int pos, int val)
@@ -63,25 +66,35 @@ void insert(Node *head, int pos, int val)
     flag->next = newNode;
 }
 
+void print_reverse(Node *head)
+{
+    // Node *temp = head;
+    if (head == NULL)
+    {
+        return;
+    }
+    print_reverse(head->next);
+    cout << head->val << " ";
+}
+
 int main()
 {
 
-    Node *head = new Node(10);
-    Node *a = new Node(20);
-    Node *tail = new Node(30);
-    // connections (head->a->b)
-    head->next = a;
-    a->next = tail;
-    // operation
-    insert_at_head(head, 100);
-    insert_at_head(head, 200);
+    Node *head = NULL;
+    Node *tail = NULL;
+    int val;
+    // take input . Here in input (-1) means end of input
+    while (1)
+    {
+        cin >> val;
+        if (val == -1)
+            break;
+        push(head, tail, val);
+    }
 
-    push(head, tail, 99);
-    push(head, tail, 200);
-    // push(head, tail, 199);
-    insert(head, 1, 898);
-    // printing
     print_linked_list(head);
-
+    cout << endl;
+    cout << "Printing it reverse ⬇" << endl;
+    print_reverse(head);
     return 0;
 }
