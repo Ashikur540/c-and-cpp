@@ -6,7 +6,9 @@ int main()
     int n;
     cin >> n;
 
-    vector<string> v(n);
+    vector<int> v = {1, 2, 3, 4};
+    v.resize(2);
+    v.resize(4);
 
     for (int i = 0; i < n; i++)
     {
@@ -18,6 +20,7 @@ int main()
         cout << v[i] << " ";
     }
     cout << endl;
+    cout << v.back();
 
     return 0;
 }

@@ -1,0 +1,1 @@
+ push(head, tail, 124);
