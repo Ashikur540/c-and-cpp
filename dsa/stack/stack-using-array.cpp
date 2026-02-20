@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * Stack always uses top (last) for ttracing. As elements inserts and deletes, see through the top only
+ */
+
 class myStack
 {
     vector<int> arr;
